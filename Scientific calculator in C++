@@ -1,0 +1,122 @@
+// SCIENTIFIC CALCULATOR : 82MS(USING C++)//
+#include<iostream>
+#include<cmath>
+using namespace std;
+int main()
+{
+    int a=1,b=1,choice,i,j,k,x=1,d=1,e=1,f=1;
+    float r;
+    cout<<"Enter the 1st number:";
+    cin>>a;
+    cout<<"Enter the 2nd number:";
+    cin>>b;
+    cout<<"PLEASE READ THE INSTRUCTIONS GIVEN BELOW"<<endl;
+    cout<<"Enter 1 to add."<<endl;
+    cout<<"Enter 2 to subtract."<<endl;
+    cout<<"Enter 3 to multiply."<<endl;
+    cout<<"Enter 4 to divide."<<endl;
+    cout<<"Enter 5 to perform modulus operation."<<endl;
+    cout<<"Enter 6 to perform permutation & combination operations."<<endl;
+    cout<<"Enter 7 to perform power operation."<<endl;
+    cout<<"Enter 8 to perform sin."<<endl;
+    cout<<"Enter 9 to perform cosine."<<endl;
+    cout<<"Enter 10 to perform tangent."<<endl;
+    cout<<"Enter 11 to perform logarithm addition."<<endl;
+    cout<<"Enter 12 to perform logarithm subtraction."<<endl;
+    cout<<"Enter 13 to perform logarithm multiplication."<<endl;
+    cout<<"Enter 14 to perform logarithm division."<<endl;
+    cout<<"Enter 15 to find log of given two numbers."<<endl;
+    cout<<"Enter 16 to find log of any number on base 10."<<endl;
+    cout<<"Enter 17 to find factorial of a number."<<endl;
+    cout<<"Enter the choice:";
+    cin>>choice;
+    switch(choice){
+        case 1:r=a+b;    //ADDITION
+        cout<<"Result of addition="<<r;
+        break;
+        case 2:r=a-b;     // SUBTRACTION
+        cout<<"Result of subtraction="<<r;
+        break;
+        case 3:r=a*b;	  // MULTIPLICATION
+        cout<<"Result of multiplication="<<r;
+        break;
+        case 4:r=a/b;      // DIVISION
+        cout<<"Result of division="<<r;
+        break;
+        case 5:r=a%b;    // MODULUS
+        cout<<"Result of modulo operation="<<r;
+        break;
+        case 6:    /* COMBINATION AND PERMUTATION
+        		   TO PERFORM THIS OPERATION YOU NEED a>b */
+        for(i=1;i<=a;i++){
+            d=d*i;
+        }
+        x=a-b;
+        for(j=1;j<=x;j++){
+            e=e*j;
+        }
+        for(k=1;k<=b;k++){
+            f=f*k;
+        }
+        r=(d)/(e*f);
+        cout<<"Result of combination operation="<<r;
+        cout<<"Result of permutation operation="<<(r*f);
+        break;
+        case 7:r=pow(a,b);
+        cout<<"Result of power operation="<<r;
+       break;
+       case 8:   // SINE FUNCTION
+       r=sin(a+b);
+       cout<<"Result(in sin)="<<r;
+       break;
+       case 9:  // COSINE FUNCTION
+       r=cos(a+b);
+       cout<<"Result (in cos)="<<r;
+       break;
+       case 10:   // TANGENT FUNCTION
+       r=tan(a+b);
+       cout<<"Result(in tan)="<<r;
+       break;
+       case 11:	//  LOGARITHM ADDITION
+       r=log(a+b);
+       cout<<"Result="<<r;
+       break;
+       case 12:   //LOGARITHM SUBTRACTION
+       r=log(a-b);
+       cout<<"Result="<<r;
+       break;
+       case 13:    //LOGARITHM  MULTIPLICATION
+       r=log(a*b);
+       cout<<"Result="<<r;
+       break;
+       case 14:    // LOGARITHM DIVISION
+       r=log(a/b);
+       cout<<"Result="<<r;
+       break;
+       case 15:	// LOGARITHM OF GIVEN TWO NUMBER
+       			cout<<"Log of 1st number="<<(log(a));
+       			cout<<"Log of 2nd number="<<(log(b));
+       			break;
+       	case 16:
+       			int num1;
+       			cout<<"Enter a number:";	// base 10 logarithm 
+       			cin>>num1;
+       			r=(log(num1))/2.303;
+       			cout<<"The log of this number on base 10 is ="<<r;
+       	break;
+       	case 17:		// Factorial of a number
+       	        int num2,g,fact;
+       	         fact=1;
+       	        	cout<<"Enter a number:";
+       			cin>>num2;
+       			for(g=1;g<=num2;g++){
+       			    fact=fact*g;
+       			}
+       			cout<<"Factorial of the number is ="<<fact;
+       			break;
+        default:
+				cout<<"Not a suitable operation for this device.";
+       			break;
+}
+return 0;
+}
