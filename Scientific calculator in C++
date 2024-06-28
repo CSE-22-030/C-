@@ -59,8 +59,8 @@ int main()
             f=f*k;
         }
         r=(d)/(e*f);
-        cout<<"Result of combination operation="<<r;
-        cout<<"Result of permutation operation="<<(r*f);
+        cout<<"Result of combination operation="<<r<<endl;
+        cout<<"Result of permutation operation="<<(r*f)<<endl;
         break;
         case 7:r=pow(a,b);
         cout<<"Result of power operation="<<r;
